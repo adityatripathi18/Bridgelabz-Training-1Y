@@ -1,4 +1,3 @@
-// Base class for Employee Management System
 public class Employee {
 
     protected int employeeId;
@@ -8,12 +7,11 @@ public class Employee {
 
     public Employee(int employeeId, String firstName, String lastName, String company) {
         this.employeeId = employeeId;
-        this.firstName  = firstName;
-        this.lastName   = lastName;
-        this.company    = company;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.company = company;
     }
 
-    // Generates email: firstname.lastname@company.com (all lowercase)
     public String generateEmail() {
         return firstName.toLowerCase() + "." + lastName.toLowerCase()
                + "@" + company.toLowerCase() + ".com";

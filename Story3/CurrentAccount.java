@@ -1,4 +1,3 @@
-// CurrentAccount — 2% annual interest
 public class CurrentAccount extends Account {
 
     private static final double INTEREST_RATE = 0.02;

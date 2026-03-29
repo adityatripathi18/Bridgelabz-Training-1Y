@@ -1,8 +1,7 @@
-// LiveCourse — 5% discount on base price
 public class LiveCourse extends Course {
 
     private static final double DISCOUNT_RATE = 0.05;
-    private String schedule;    // e.g. "Mon/Wed/Fri 7:00 PM"
+    private String schedule;
 
     public LiveCourse(int courseId, String courseName, double price,
                        String instructor, String schedule) {
@@ -10,7 +9,6 @@ public class LiveCourse extends Course {
         this.schedule = schedule;
     }
 
-    // Override: apply 5% discount
     @Override
     public double calculatePrice() {
         return price - (price * DISCOUNT_RATE);

@@ -1,4 +1,3 @@
-// Magazine extends Book — overrides fine to ₹5/day
 public class Magazine extends Book {
 
     private String issueMonth;
@@ -8,7 +7,6 @@ public class Magazine extends Book {
         this.issueMonth = issueMonth;
     }
 
-    // Override: Magazine fine = ₹5 per day
     @Override
     public double calculateFine(int daysLate) {
         return daysLate * 5.0;

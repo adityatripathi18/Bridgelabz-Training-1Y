@@ -1,4 +1,3 @@
-// Base class for the Contact App
 public class Contact {
 
     protected String name;
@@ -6,12 +5,11 @@ public class Contact {
     protected String email;
 
     public Contact(String name, String phoneNumber, String email) {
-        this.name        = name;
+        this.name = name;
         this.phoneNumber = phoneNumber;
-        this.email       = email;
+        this.email = email;
     }
 
-    // Display basic contact info
     public void display() {
         System.out.println("Name   : " + name);
         System.out.println("Phone  : " + phoneNumber);

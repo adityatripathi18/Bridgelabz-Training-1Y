@@ -1,4 +1,3 @@
-// RegularOrder — no discount, standard delivery charge applies
 public class RegularOrder extends Order {
 
     public RegularOrder(int orderId, String itemName, double basePrice) {
@@ -12,7 +11,7 @@ public class RegularOrder extends Order {
 
     @Override
     public void displayOrder() {
-        System.out.println("Order Type    : Regular Order");
+        System.out.println("Order Type : Regular Order");
         super.displayOrder();
     }
 }

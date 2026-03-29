@@ -1,4 +1,3 @@
-// RecordedCourse — 10% discount on base price
 public class RecordedCourse extends Course {
 
     private static final double DISCOUNT_RATE = 0.10;
@@ -10,7 +9,6 @@ public class RecordedCourse extends Course {
         this.totalVideos = totalVideos;
     }
 
-    // Override: apply 10% discount
     @Override
     public double calculatePrice() {
         return price - (price * DISCOUNT_RATE);

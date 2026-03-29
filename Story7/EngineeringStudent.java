@@ -1,21 +1,19 @@
-// EngineeringStudent extends Student — branch appended to name, grade includes CGPA
 public class EngineeringStudent extends Student {
 
-    private String branch;      // e.g. "Computer Science", "Mechanical"
+    private String branch;
     private int semester;
 
     public EngineeringStudent(int studentId, String name, double marks,
                                String branch, int semester) {
-        super(studentId, name + " (" + branch + ")", marks);  // append branch to name
-        this.branch   = branch;
+        super(studentId, name + " (" + branch + ")", marks);
+        this.branch = branch;
         this.semester = semester;
     }
 
-    // Override: also shows CGPA equivalent (marks / 10)
     @Override
     public String calculateGrade() {
         String grade = super.calculateGrade();
-        double cgpa  = marks / 10.0;
+        double cgpa = marks / 10.0;
         return grade + " | CGPA: " + String.format("%.1f", cgpa);
     }
 
@@ -27,7 +25,6 @@ public class EngineeringStudent extends Student {
         super.displayResult();
     }
 
-    // Simple main to demonstrate the system
     public static void main(String[] args) {
 
         System.out.println("=== Student Result System ===\n");

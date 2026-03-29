@@ -1,11 +1,9 @@
-// Main class — demonstrates polymorphism in the Online Learning Platform
 public class TestCourse {
 
     public static void main(String[] args) {
 
-        System.out.println("=== " + Course.platformName + " — Online Learning Platform ===\n");
+        System.out.println("=== " + Course.platformName + " Online Learning Platform ===\n");
 
-        // courseName strings passed in any case — auto-converted to Title Case
         Course[] courses = {
             new Course(601, "introduction to python", 2999.00, "Dr. Arjun Menon"),
             new RecordedCourse(602, "data structures and algorithms", 4999.00,
@@ -16,7 +14,7 @@ public class TestCourse {
 
         for (Course c : courses) {
             System.out.println("-----------------------------");
-            c.displayCourse();   // runtime polymorphism
+            c.displayCourse();
         }
 
         System.out.println("-----------------------------");

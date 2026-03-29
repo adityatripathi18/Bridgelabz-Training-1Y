@@ -1,4 +1,3 @@
-// Manager extends Employee — email includes department
 public class Manager extends Employee {
 
     private String department;
@@ -9,7 +8,6 @@ public class Manager extends Employee {
         this.department = department;
     }
 
-    // Override: manager email = firstname.lastname@department.company.com
     @Override
     public String generateEmail() {
         return firstName.toLowerCase() + "." + lastName.toLowerCase()
@@ -24,7 +22,6 @@ public class Manager extends Employee {
         System.out.println("Department  : " + department);
     }
 
-    // Simple main to demonstrate the feature
     public static void main(String[] args) {
 
         System.out.println("=== Employee Management System ===\n");

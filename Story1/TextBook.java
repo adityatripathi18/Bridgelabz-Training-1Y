@@ -1,4 +1,3 @@
-// TextBook extends Book — overrides fine to ₹2/day
 public class TextBook extends Book {
 
     private String subject;
@@ -8,7 +7,6 @@ public class TextBook extends Book {
         this.subject = subject;
     }
 
-    // Override: TextBook fine = ₹2 per day
     @Override
     public double calculateFine(int daysLate) {
         return daysLate * 2.0;

@@ -1,17 +1,15 @@
-// ElectronicProduct extends Product — also searches by brand
 public class ElectronicProduct extends Product {
 
     private String brand;
-    private String category;  // e.g. "Laptop", "Mobile"
+    private String category;
 
     public ElectronicProduct(int productId, String productName,
                               double price, String brand, String category) {
         super(productId, productName, price);
-        this.brand    = brand;
+        this.brand = brand;
         this.category = category;
     }
 
-    // Override: match by product name OR brand OR category
     @Override
     public boolean isMatch(String keyword) {
         return productName.toLowerCase().contains(keyword.toLowerCase())
@@ -26,7 +24,6 @@ public class ElectronicProduct extends Product {
         System.out.println("Category     : " + category);
     }
 
-    // Simple main to demonstrate product search
     public static void main(String[] args) {
 
         System.out.println("=== E-Commerce Product Search ===\n");
@@ -37,11 +34,9 @@ public class ElectronicProduct extends Product {
             new ElectronicProduct(403, "MacBook Air M2", 115000.00, "Apple", "Laptop")
         };
 
-        String keyword = "laptop";
-        System.out.println("Search keyword: \"" + keyword + "\"\n");
-
+        System.out.println("Search keyword: \"laptop\"\n");
         for (Product p : products) {
-            if (p.isMatch(keyword)) {
+            if (p.isMatch("laptop")) {
                 System.out.println("--- Match Found ---");
                 p.displayProduct();
             }
